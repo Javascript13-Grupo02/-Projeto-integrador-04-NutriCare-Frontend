@@ -85,14 +85,14 @@ function FormContato() {
                 /* ESTADO 2: MENSAGEM ENVIADA */
 
                 <div className="flex flex-col items-center justify-center text-center gap-4 h-full animate-fade-in">
-                    <CheckCircleIcon size={80} color="#00786f" weight="fill"/>
-                    <h2 className="text-3xl font-bold text-teal-800">Mensagem Enviada!</h2>
-                    <p className="text-orange-900">
+                    <CheckCircleIcon size={80} color="#fff" weight="fill"/>
+                    <h2 className="text-3xl font-bold text-white">Mensagem Enviada!</h2>
+                    <p className="text-orange-100">
                         Obrigado pelo contato. <br /> Retornaremos em breve.
                     </p>
                     <button 
                         onClick={() => setEnviado(false)}
-                        className="mt-6 text-sm underline text-orange-700 hover:text-orange-900">
+                        className="mt-6 text-sm underline text-orange-200 hover:text-orange-500">
                         Enviar outra mensagem
                     </button>
                 </div>
