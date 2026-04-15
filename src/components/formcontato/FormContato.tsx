@@ -30,7 +30,7 @@ function FormContato() {
             {/* div de nome */}
             <div className="flex flex-col gap-1.5">
                 <div className="flex flex-row items-center gap-0.5"> 
-                    <UserIcon size={20} color="#9f2d00" weight="bold"  />
+                    <UserIcon size={20} color="#ffedd4" weight="bold"  />
                     <label htmlFor="nome" className="font-bold">Nome</label>
                 </div>
                 <input type="text"
@@ -38,13 +38,13 @@ function FormContato() {
                         id="nome"
                         name="nome"
                         required
-                        className="border-2 rounded-xl py-2 px-4 w-6/10 bg-orange-50 focus:outline-none" />
+                        className="border-2 rounded-xl py-2 px-4 w-6/10 bg-orange-50  text-orange-800 focus:outline-none" />
             </div>
 
             {/* div de email */}
             <div className="flex flex-col gap-1.5">
                 <div className="flex flex-row items-end gap-0.5">
-                    <AtIcon size={20} color="#9f2d00" weight="bold" />
+                    <AtIcon size={20} color="#ffedd4" weight="bold" />
                     <label htmlFor="email" className="font-bold">E-mail</label>
                     
                 </div>
@@ -53,13 +53,13 @@ function FormContato() {
                         id="email"
                         name="email"
                         required
-                        className="border-2 rounded-xl py-2 px-4 w-7/10 bg-orange-50 focus:outline-none"/>
+                        className="border-2 rounded-xl py-2 px-4 w-7/10 bg-orange-50 text-orange-800 focus:outline-none"/>
             </div>
 
             {/* div de mensagem */}
             <div className="flex flex-col gap-1.5">
                 <div className="flex flex-row items-end gap-0.5">
-                    <EnvelopeSimpleIcon size={20} color="#9f2d00" weight="bold" />
+                    <EnvelopeSimpleIcon size={20} color="#ffedd4" weight="bold" />
                     <label htmlFor="mensagem" className="font-bold">Mensagem</label>
                     
                 </div>
@@ -69,14 +69,14 @@ function FormContato() {
                         name="mensagem"
                         required
                         className="border-2 rounded-xl py-2.5 px-4 w-9/10 
-                                field-sizing-content bg-orange-50 resize-none focus:outline-none"
+                                field-sizing-content bg-orange-50 text-orange-800 resize-none focus:outline-none"
                                 rows={5}/>
                 
                 <button type="submit"
                         id="submit"
                         name="submit"
-                        className="flex justify-center items-center mt-2.5 w-9/10 p-4
-                            rounded-lg text-white font-bold text-md bg-teal-600 
+                        className="flex justify-center items-center leading-1.5 mt-2.5 w-9/10 p-4
+                            rounded-lg  text-white font-bold text-md bg-teal-600 
                             hover:bg-teal-700 inset-1 inset-"
                     >Enviar</button>
             </div>
