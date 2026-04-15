@@ -1,5 +1,4 @@
 import FormContato from "../../components/formcontato/FormContato"
-import Hero from "../../components/hero/Hero"
 import ListaReceitas from "../../components/receita/listareceita/ListaReceita"
 
 function Home() {
@@ -13,7 +12,6 @@ function Home() {
           <p className="text-2xl md:text-3xl font-medium leading-snug text-white text-center m-2">Alimentação saudável e saborosa na sua porta a qualquer momento do dia</p>
         </div>
       </section>
-      {/* <Hero /> */}
       <ListaReceitas />
       <FormContato />
     </>
