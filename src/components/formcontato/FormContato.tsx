@@ -14,10 +14,11 @@ function FormContato() {
   return (
 
     // Conteiner externo
-    <div className="flex flex-col justify-center rounded-2xl bg-orange-100 text-orange-800 
-                        w-160 min-h-150 my-4 mx-4 px-8 py-8 shadow-2xl transition-all">
+    <div className="flex items-center justify-center bg-orange-100 pb-4">
+    <div className="flex flex-col justify-center rounded-2xl bg-orange-800 text-orange-100 
+                        w-240 min-h-150 my-4 mx-4 px-8 py-8 shadow-2xl transition-all">
         
-       {!enviado ? (
+    {!enviado ? (
             /* ESTADO 1: FORMULÁRIO */
             <form onSubmit={handleSubmit}
                 className="flex flex-col columns-1 justify-start gap-4 mt-3 mb-8 mx-8 w-full">
@@ -68,8 +69,8 @@ function FormContato() {
                         name="mensagem"
                         required
                         className="border-2 rounded-xl py-2.5 px-4 w-9/10 
-                                  field-sizing-content bg-orange-50 resize-none focus:outline-none"
-                                  rows={5}/>
+                                field-sizing-content bg-orange-50 resize-none focus:outline-none"
+                                rows={5}/>
                 
                 <button type="submit"
                         id="submit"
@@ -97,6 +98,7 @@ function FormContato() {
                 </div>
             )}
         </div>
+    </div>
 
    
   )
