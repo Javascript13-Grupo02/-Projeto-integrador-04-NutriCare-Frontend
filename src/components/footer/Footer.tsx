@@ -15,22 +15,27 @@ function Footer() {
                 <div className="flex flex-col items-center gap-1">
                     <p className="text-lg">Acesse nossas redes sociais</p>
                     <div className="flex gap-4 items-center">
-                        <InstagramLogo size={48} weight='bold' className="hover:text-emerald-500 cursor-pointer transition-colors" />
-                        <GithubLogo size={48} weight='bold' className="hover:text-emerald-500 cursor-pointer transition-colors" />
-                        
+                        <a href="https://www.instagram.com/_allcare/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors">
+                            <InstagramLogo size={48} weight='bold' className="hover:text-emerald-500 cursor-pointer transition-colors" />
+                        </a>
                         {/* Linktree */}
-                        <a href="#" className="hover:text-emerald-500 transition-colors">
-                            <svg xmlns="" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M13.511 5.853l4.005-4.117 2.118 2.057-4.152 4.117h5.836v2.902h-5.898l4.219 4.219-2.121 2.122-5.52-5.521-5.519 5.521-2.122-2.122 4.219-4.219H2.683V7.91h5.835L4.366 3.793l2.12-2.057 4.005 4.117V0h3.02v5.853zM10.49 16.mainstream h3.02V24H10.49v-7.149z"/>
+                        <a href="https://linktr.ee/nutricare" target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:text-emerald-500 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 256 256" fill="currentColor" className="block">
+                                <path d="M136,160v72a8,8,0,0,1-16,0V160a8,8,0,0,1,16,0Zm72-64H147.31l42.35-42.34a8,8,0,0,0-11.32-11.32L136,84.69V24a8,8,0,0,0-16,0V84.69L77.66,42.34A8,8,0,0,0,66.34,53.66L108.69,96H48a8,8,0,0,0,0,16h60.69L66.34,154.34a8,8,0,0,0,11.32,11.32L128,115.31l50.34,50.35a8,8,0,0,0,11.32-11.32L147.31,112H208a8,8,0,0,0,0-16Z"/>
                             </svg>
+                        </a>
+                        <a href="https://github.com/Javascript13-Grupo02/-Projeto-integrador-04-NutriCare-Frontend" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors">
+                            <GithubLogo size={48} weight='bold' className="hover:text-emerald-500 cursor-pointer transition-colors" />
                         </a>
                     </div>
                 </div>
 
                 {/*  Terms e Privacy */}
                 <div className="flex gap-4 text-sm">
-                    <a href="#" className="hover:text-emerald-500 transition-colors">Terms</a>
-                    <a href="#" className="hover:text-emerald-500 transition-colors">Privacy</a>
+                    <a href="#" className="hover:text-emerald-500 transition-colors">Termos</a>
+                    <a href="#" className="hover:text-emerald-500 transition-colors">Privacidade</a>
+                    <a href="#" className="hover:text-emerald-500 transition-colors">Acessibilidade</a>
+
                 </div>
 
             </div>
