@@ -1,0 +1,68 @@
+// Componente principal da página Equipe
+function Equipe() {
+    // Lista dos membros da equipe, cada um com nome, foto, link do portfólio, texto e posição da foto
+    const membros = [
+        { nome: "Daniel Nascimento", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-daniel-nascimento.png?updatedAt=1776195525043", link: "https://dnasciment0.github.io/portfolio_tjs13/", texto: "", posicaoFoto: "object-[70%_top]" },
+        { nome: "Leonardo Ibanhez", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-leonardo-ibanhez.jpg?updatedAt=1776195523970", link: "https://leoibanhez92.github.io/portfolio_tjs_13/", texto: "" },
+        { nome: "Paula Alcantara", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-paula-alcantara.jpg?updatedAt=1776195524895", link: "https://portfolio-generation-paula.netlify.app/", texto: "" },
+        { nome: "Vivian Rodrigues", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-vivian-rodrigues.png?updatedAt=1776195525935", link: "https://dashenio.github.io/portfolio/", texto: "" },
+        { nome: "Wallace Silva", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-wallace.jpg?updatedAt=1776200225538", link: "https://portfolio-we-dev.vercel.app/", texto: "" },
+    ];
+
+    // Função que renderiza cada card de membro
+    const renderMembro = (membro: typeof membros[0], index: number) => (
+        <div key={index} className="bg-white rounded-2xl shadow-md p-4 sm:p-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-[28rem]">
+            {/* Foto do membro em círculo */}
+            <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-4 border-teal-500 overflow-hidden bg-orange-200 shrink-0 flex items-center justify-center">
+                {membro.foto ? (
+                    <img
+                        src={membro.foto}
+                        alt={membro.nome}
+                        className={`w-full h-full object-cover ${"posicaoFoto" in membro ? membro.posicaoFoto : "object-top"}`}
+                    />
+                ) : (
+                    <span className="text-teal-400 text-4xl">?</span>
+                )}
+            </div>
+
+            {/* Informações do membro: nome, descrição e link do portfólio */}
+            <div className="flex flex-col gap-1 text-center sm:text-left">
+                <span className="text-lg font-semibold text-orange-900">
+                    {membro.nome}
+                </span>
+                <p className="text-sm text-orange-800">
+                    {membro.texto || "Descrição do membro"}
+                </p>
+                {/* Só mostra o link se existir */}
+                {membro.link ? (
+                    <a
+                        href={membro.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-teal-600 hover:underline"
+                    >
+                        Portfólio
+                    </a>
+                ) : null}
+            </div>
+        </div>
+    );
+
+    // Renderização principal da página
+    return (
+        <div className="min-h-screen bg-orange-100 flex flex-col items-center py-16 px-4">
+            {/* Título e logo */}
+            <div className="flex items-center gap-3 mb-8 sm:mb-12">
+                <img src="/Logo AllCare Cores Escuras.png" alt="AllCare" className="h-10 sm:h-14" />
+                <h1 className="text-2xl sm:text-4xl font-bold text-orange-900">Equipe AllCare</h1>
+            </div>
+
+            {/* Grid responsivo dos cards dos membros */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {membros.map(renderMembro)}
+            </div>
+        </div>
+    );
+}
+
+export default Equipe;
