@@ -2,18 +2,18 @@
 function Equipe() {
     // Lista dos membros da equipe, cada um com nome, foto, link do portfólio, texto e posição da foto
     const membros = [
-        { nome: "Daniel Nascimento", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-daniel-nascimento.png?updatedAt=1776195525043", link: "https://dnasciment0.github.io/portfolio_tjs13/", texto: "", posicaoFoto: "object-[70%_top]" },
-        { nome: "Leonardo Ibanhez", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-leonardo-ibanhez.jpg?updatedAt=1776195523970", link: "https://leoibanhez92.github.io/portfolio_tjs_13/", texto: "" },
-        { nome: "Paula Alcantara", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-paula-alcantara.jpg?updatedAt=1776195524895", link: "https://portfolio-generation-paula.netlify.app/", texto: "" },
-        { nome: "Vivian Rodrigues", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-vivian-rodrigues.png?updatedAt=1776195525935", link: "https://dashenio.github.io/portfolio/", texto: "" },
-        { nome: "Wallace Silva", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-wallace.jpg?updatedAt=1776200225538", link: "https://portfolio-we-dev.vercel.app/", texto: "" },
+        { nome: "Daniel Nascimento", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-daniel-nascimento.png?updatedAt=1776195525043", link: "https://dnasciment0.github.io/portfolio_tjs13/", texto: "Desenvolvedor", posicaoFoto: "object-[70%_top]" },
+        { nome: "Leonardo Ibanhez", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-leonardo-ibanhez.jpg?updatedAt=1776195523970", link: "https://leoibanhez92.github.io/portfolio_tjs_13/", texto: "Desenvolvedor" },
+        { nome: "Paula Alcantara", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-paula-alcantara.jpg?updatedAt=1776195524895", link: "https://portfolio-generation-paula.netlify.app/", texto: "SCRUM Master" },
+        { nome: "Vivian Rodrigues", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-vivian-rodrigues.png?updatedAt=1776195525935", link: "https://dashenio.github.io/portfolio/", texto: "Desenvolvedor" },
+        { nome: "Wallace Silva", foto: "https://ik.imagekit.io/vjqejp2vh/integrantes/foto-wallace.jpg?updatedAt=1776200225538", link: "https://portfolio-we-dev.vercel.app/", texto: "Tester" },
     ];
 
     // Função que renderiza cada card de membro
     const renderMembro = (membro: typeof membros[0], index: number) => (
         <div key={index} className="bg-white rounded-2xl shadow-md p-4 sm:p-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-[28rem]">
             {/* Foto do membro em círculo */}
-            <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-4 border-teal-500 overflow-hidden bg-orange-200 shrink-0 flex items-center justify-center">
+            <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-teal-500 overflow-hidden bg-orange-200 shrink-0 flex items-center justify-center">
                 {membro.foto ? (
                     <img
                         src={membro.foto}
@@ -58,7 +58,7 @@ function Equipe() {
             </div>
 
             {/* Grid responsivo dos cards dos membros */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
                 {membros.map(renderMembro)}
             </div>
         </div>

@@ -1,10 +1,10 @@
 function Sobre() {
   return (
-    <div className="bg-orange-100 w-full py-24 px-4 min-h-screen flex flex-col items-center">
+    <div className="bg-orange-100 w-full py-12 px-4 min-h-screen flex flex-col items-center">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold  text-orange-800">
-            NUTRICARE
+          <h1 className="text-3xl md:text-5xl font-bold  text-orange-800">
+            NutriCare
           </h1>
           <h2 className="text-2xl md:text-4xl font-bold  text-orange-800">
             Inteligência em Alimentação Saudável
