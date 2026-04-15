@@ -1,11 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import FormContato from "./components/formcontato/FormContato"
+
 
 function App() {
   return (
     <>
-    <div>
-      <FormContato/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<FormContato />}/>
+
+      
+      </Routes>
+    </BrowserRouter>
+    
     </>
   )
 }
